@@ -95,12 +95,12 @@ openstack flavor create m0-kubernetes --disk 20 --vcpu 4 --ram 4096 --public
 
 #17. Download Fedore-CoreOS
 sudo dnf install -y wget
-wget https://builds.coreos.fedoraproject.org/prod/streams/stable/builds/32.20200726.3.1/x86_64/fedora-coreos-32.20200726.3.1-openstack.x86_64.qcow2.xz
-unxz fedora-coreos-32.20200726.3.1-openstack.x86_64.qcow2.xz
+wget https://builds.coreos.fedoraproject.org/prod/streams/stable/builds/32.20200629.3.0/x86_64/fedora-coreos-32.20200629.3.0-openstack.x86_64.qcow2.xz
+unxz fedora-coreos-32.20200629.3.0-openstack.x86_64.qcow2.xz
 
 #18. Upload the image to glance
 openstack image create \
-  --file fedora-coreos-32.20200726.3.1-openstack.x86_64.qcow2 \
+  --file fedora-coreos-32.20200629.3.0-openstack.x86_64.qcow2 \
   --disk-format qcow2 \
   --container-format=bare \
   --property os_distro=fedora-coreos \
